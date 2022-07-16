@@ -1,7 +1,7 @@
 class Solution {
     
     //brute force
-   public int missingNumber(int[] nums) {
+  /* public int missingNumber(int[] nums) {
        
         Arrays.sort(nums);
        
@@ -11,11 +11,11 @@ class Solution {
                 return i;
         }
           return nums.length;    
-    }
+    }*/
     
     
     //based on math formula summation of n no n*(n+1)/2
-  /*  public int missingNumber(int[] nums) {
+   public int missingNumber(int[] nums) {
         
         int n = nums.length;
         int total = n*(n+1) /2;
@@ -26,7 +26,7 @@ class Solution {
         }
         return total-sum;
               
-    }*/
+    }
     //tc : o(n) sc : o(1)
     
     
