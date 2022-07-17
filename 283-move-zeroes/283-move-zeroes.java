@@ -1,7 +1,8 @@
 class Solution {
     public void moveZeroes(int[] nums) {
         
-        ArrayList<Integer> nonZero = new ArrayList<>();
+        //brute force
+      /*  ArrayList<Integer> nonZero = new ArrayList<>();
         ArrayList<Integer> Zero = new ArrayList<>();
         int i=0;
         for(int n : nums)
@@ -18,6 +19,20 @@ class Solution {
         for(int num : Zero)
         {
             nums[i++]=num;
+        }*/
+        
+        
+        //optimized
+        int insertPos=0;
+        for(int num : nums)
+        {
+            if(num !=0)
+                nums[insertPos++] = num;
+
+        }
+        while(insertPos<nums.length)
+        {
+            nums[insertPos++] = 0;
         }
         
     }
