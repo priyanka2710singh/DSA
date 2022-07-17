@@ -23,6 +23,9 @@ class Solution {
         
         
         //optimized
+        if(nums.length ==0 || nums ==  null)
+            return; 
+        
         int insertPos=0;
         for(int num : nums)
         {
