@@ -14,6 +14,7 @@
  * }
  */
 class Solution {
+    /* Iterative solution
     public List<List<Integer>> levelOrder(TreeNode root) {
         
         List<List<Integer>> list = new ArrayList<>();
@@ -38,6 +39,27 @@ class Solution {
         }
         return list;
     }
-    
+    */
+    List<List<Integer>> result;
    
+     public List<List<Integer>> levelOrder(TreeNode root) {
+         
+             result = new ArrayList<>();
+             if(root==null)
+                 return result;
+             traverse(root,0);
+             return result;
+             
+         }
+        public void traverse(TreeNode root,int level)
+         {
+            if(root==null) return;
+             if(result.size()==level)
+                 result.add(new ArrayList<>());
+         
+         
+         result.get(level).add(root.val);
+         traverse(root.left,level+1);
+         traverse(root.right,level+1);
+        }
 }
